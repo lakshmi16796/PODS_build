@@ -8,6 +8,7 @@ pipeline {
                     cd /home/lakshmi/dell_pods/poky
                     pwd
                     source oe-init-build-env
+                    bitbake core-image-pods
                 '''
             }
         }
