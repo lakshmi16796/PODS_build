@@ -1,16 +1,12 @@
 pipeline {
     agent any
     stages {
-        stage('Simple Shell Test') {
+        stage('Test Write Access') {
             steps {
-                script {
-                    echo "repeat for all your shell steps"
-                }
-                sh """ 
-                    #!/bin/bash
-                    echo "This is a test"
-                    date
-                """
+                sh '''
+                    echo "Testing file write" > /var/lib/jenkins/workspace/pods_build/testfile.txt
+                    cat /var/lib/jenkins/workspace/pods_build/testfile.txt
+                '''
             }
         }
     }
