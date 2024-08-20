@@ -1,12 +1,7 @@
 pipeline {
   agent any
   stages {
-	  
-   stage('Checkout') {
-            steps {
-                git credentialsId: 'github_creds', url: 'https://github.com/lakshmi16796/PODS_build.git'
-            }
-    stage ("Edit")
+stage ("Edit")
     {
       steps {
         
