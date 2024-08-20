@@ -8,6 +8,7 @@ stage ("Edit")
         script {
 	 		       
 	 {
+dir("/home/lakshmi/dell_pods/poky/) {
         sh '''#!/bin/bash
 	
 	echo "inside shell"
@@ -26,6 +27,7 @@ stage ("Edit")
 		
         '''
 	}  
+    }
     }
   }
    }
